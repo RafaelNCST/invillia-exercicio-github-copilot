@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let participantsHtml = "";
         if (details.participants.length > 0) {
           participantsHtml = `
-            <div>
+            <div class="participants-info">
               <strong>Participants:</strong>
               <ul>
                 ${details.participants.map(email => `<li>${email}</li>`).join("")}
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           `;
         } else {
-          participantsHtml = `<div><strong>Participants:</strong> <em>No participants yet</em></div>`;
+          participantsHtml = `<div class="participants-info"><strong>Participants:</strong> <em>No participants yet</em></div>`;
         }
 
         activityCard.innerHTML = `
